@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2023/06/20 13:42:00.024,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/06/20 13:54:04.262,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Calculadora\Unit1.dfm=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2023/06/20 13:54:04.262,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Calculadora\Unit1.pas=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/06/20 13:55:43.418,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Calculadora Intermediaria\Project1.dproj=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2023/06/20 13:42:00.000.024,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/20 13:54:04.000.262,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Calculadora\Unit1.pas</Transaction>
+    <Transaction>2023/06/20 13:54:04.000.262,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Calculadora\Unit1.dfm</Transaction>
+    <Transaction>2023/06/20 13:55:43.000.418,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Calculadora Intermediaria\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>

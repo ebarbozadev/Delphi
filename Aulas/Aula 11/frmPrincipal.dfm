@@ -1,8 +1,9 @@
 object GS: TGS
   Left = 0
   Top = 0
+  BorderIcons = []
   Caption = 'Gerence'
-  ClientHeight = 147
+  ClientHeight = 197
   ClientWidth = 616
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -10,8 +11,13 @@ object GS: TGS
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIForm
   Menu = MainMenu1
+  PopupMenu = PopupMenu1
   Position = poScreenCenter
+  DesignSize = (
+    616
+    197)
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
@@ -21,6 +27,7 @@ object GS: TGS
     Align = alTop
     Caption = 'Panel1'
     TabOrder = 0
+    ExplicitWidth = 612
     object Button1: TButton
       Left = 465
       Top = 1
@@ -30,6 +37,7 @@ object GS: TGS
       Caption = 'Cadastrar'
       TabOrder = 0
       OnClick = Button1Click
+      ExplicitLeft = 461
     end
     object edtInput: TEdit
       Left = 1
@@ -39,6 +47,7 @@ object GS: TGS
       Align = alClient
       CanUndoSelText = True
       TabOrder = 1
+      ExplicitWidth = 460
       ExplicitHeight = 23
     end
     object Button2: TButton
@@ -50,21 +59,34 @@ object GS: TGS
       Caption = 'Limpar'
       TabOrder = 2
       OnClick = Button2Click
+      ExplicitLeft = 536
     end
   end
   object Cadastrados: TMemo
-    Left = 0
-    Top = 33
-    Width = 616
-    Height = 114
-    Align = alClient
+    Left = 1
+    Top = 32
+    Width = 614
+    Height = 105
+    Align = alCustom
+    Anchors = [akLeft, akTop, akRight, akBottom]
     Lines.Strings = (
       'Cadastrados')
+    PopupMenu = PopupMenu2
     TabOrder = 1
   end
+  object Button3: TButton
+    Left = 533
+    Top = 164
+    Width = 75
+    Height = 25
+    Anchors = [akRight, akBottom]
+    Caption = 'Fechar'
+    TabOrder = 2
+    OnClick = Button3Click
+  end
   object MainMenu1: TMainMenu
-    Left = 592
-    Top = 32
+    Left = 8
+    Top = 65520
     object Inicio1: TMenuItem
       Caption = 'Inicio'
     end
@@ -102,6 +124,21 @@ object GS: TGS
         Caption = 'Equipe'
         OnClick = Equipe1Click
       end
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Top = 168
+    object PopUpPanel: TMenuItem
+      Caption = 'Sair'
+      OnClick = PopUpPanelClick
+    end
+  end
+  object PopupMenu2: TPopupMenu
+    Left = 8
+    Top = 104
+    object Limpar1: TMenuItem
+      Caption = 'Limpar'
+      OnClick = Limpar1Click
     end
   end
 end

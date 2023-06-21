@@ -28,7 +28,6 @@ type
     Button14: TButton;
     Button15: TButton;
     Button16: TButton;
-    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,14 +40,5 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TForm1.Button2Click(Sender: TObject);
-var
-  Resposta : String;
-
-begin
-  Resposta := '0';
-  edtValor1 := Resposta;
-end;
 
 end.

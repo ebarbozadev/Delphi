@@ -26,10 +26,18 @@ type
     GerenceHelp2: TMenuItem;
     GerenceWhatsapp1: TMenuItem;
     GerenceComerAqui1: TMenuItem;
+    Button3: TButton;
+    PopupMenu1: TPopupMenu;
+    PopUpPanel: TMenuItem;
+    PopupMenu2: TPopupMenu;
+    Limpar1: TMenuItem;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Equipe1Click(Sender: TObject);
     procedure Funcionrios1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure PopUpPanelClick(Sender: TObject);
+    procedure Limpar1Click(Sender: TObject);
   private
     { Private declarations }
 
@@ -60,6 +68,12 @@ begin
   Cadastrados.Lines.Clear;
 end;
 
+procedure TGS.Button3Click(Sender: TObject);
+begin
+  ShowMessage('Fechando o Sistema');
+  Close;
+end;
+
 procedure TGS.Equipe1Click(Sender: TObject);
 begin
   ShowMessage(Equipe);
@@ -75,6 +89,17 @@ begin
   usuarioEquipeCargo := InputBox('Cadastrar Funcionário', 'Cargo:', 'Estagiário');
   usuarioEquipeSalario := InputBox('Cadastrar Funcionário', 'Salário:', '0');
   Equipe := usuarioEquipeNome + ' ' + usuarioEquipeCargo + ' ' + usuarioEquipeSalario + '; ' + Equipe;
+end;
+
+procedure TGS.Limpar1Click(Sender: TObject);
+begin
+  Cadastrados.Lines.Clear;
+end;
+
+procedure TGS.PopUpPanelClick(Sender: TObject);
+begin
+  ShowMessage('Fechando o Sistema');
+  Close;
 end;
 
 end.
