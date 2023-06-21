@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/06/20 17:00:01.000.005,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/21 15:37:35.085,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/21 15:38:38.102,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\Unit1.pas=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/21 15:38:38.102,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\Unit1.dfm=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/06/21 15:50:33.888,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\Gerence_Cadastros.dproj=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/06/21 15:51:36.681,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\Unit2.pas</Transaction>
+    <Transaction>2023/06/21 15:51:46.519,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\frmProduto.pas=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\Unit2.pas</Transaction>
+    <Transaction>2023/06/21 15:51:46.519,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\frmProduto.dfm=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\Unit2.dfm</Transaction>
+    <Transaction>2023/06/21 15:52:25.834,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\unitFrmProduto.pas=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\frmProduto.pas</Transaction>
+    <Transaction>2023/06/21 15:52:25.834,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\unitFrmProduto.dfm=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\frmProduto.dfm</Transaction>
+    <Transaction>2023/06/21 17:29:31.013,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\Unit2.pas</Transaction>
+    <Transaction>2023/06/21 17:29:46.894,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\unitFrmProdutoRlt.dfm=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\Unit2.dfm</Transaction>
+    <Transaction>2023/06/21 17:29:46.894,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\unitFrmProdutoRlt.pas=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\Unit2.pas</Transaction>
+    <Transaction>2023/06/21 17:51:57.046,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\unitFrmProdutoRlt.pas=</Transaction>
+    <Transaction>2023/06/21 17:52:40.738,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastros\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>
