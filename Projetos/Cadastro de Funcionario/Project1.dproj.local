@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2023/06/20 15:43:12.979,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/06/20 15:47:36.286,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Funcionario\Unit1.pas=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/06/20 15:47:36.286,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Funcionario\Unit1.dfm=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2023/06/20 16:04:39.338,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Funcionario\Project1.dproj=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2023/06/20 15:43:12.000.979,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/20 15:47:36.000.286,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Funcionario\Unit1.pas</Transaction>
+    <Transaction>2023/06/20 15:47:36.000.286,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Funcionario\Unit1.dfm</Transaction>
+    <Transaction>2023/06/20 16:04:39.000.338,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Funcionario\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
