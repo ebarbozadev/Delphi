@@ -1,0 +1,74 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 52
+  ClientWidth = 347
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 8
+    Top = 8
+    Width = 11
+    Height = 15
+    Caption = 'ID'
+  end
+  object Label2: TLabel
+    Left = 39
+    Top = 8
+    Width = 33
+    Height = 15
+    Caption = 'Nome'
+  end
+  object Label3: TLabel
+    Left = 215
+    Top = 8
+    Width = 29
+    Height = 15
+    Caption = 'Idade'
+  end
+  object Button1: TButton
+    Left = 256
+    Top = 20
+    Width = 42
+    Height = 25
+    Caption = 'Gravar'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 304
+    Top = 20
+    Width = 39
+    Height = 25
+    Caption = 'Ver'
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object Edit1: TEdit
+    Left = 8
+    Top = 22
+    Width = 25
+    Height = 23
+    TabOrder = 2
+  end
+  object Edit2: TEdit
+    Left = 39
+    Top = 22
+    Width = 170
+    Height = 23
+    TabOrder = 3
+  end
+  object Edit3: TEdit
+    Left = 215
+    Top = 22
+    Width = 35
+    Height = 23
+    TabOrder = 4
+  end
+end

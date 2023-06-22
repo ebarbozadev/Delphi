@@ -1,0 +1,37 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Gerence'
+  ClientHeight = 100
+  ClientWidth = 255
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Menu = MainMenu1
+  Position = poScreenCenter
+  TextHeight = 15
+  object Cadastros: TMemo
+    Left = 0
+    Top = 0
+    Width = 255
+    Height = 100
+    Align = alClient
+    Lines.Strings = (
+      'Cadastros')
+    TabOrder = 0
+    ExplicitLeft = 32
+    ExplicitTop = 8
+    ExplicitWidth = 185
+    ExplicitHeight = 89
+  end
+  object MainMenu1: TMainMenu
+    Left = 224
+    object Cadastrar1: TMenuItem
+      Caption = 'Cadastrar'
+      OnClick = Cadastrar1Click
+    end
+  end
+end
