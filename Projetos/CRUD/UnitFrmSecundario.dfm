@@ -42,6 +42,7 @@ object frmSecundario: TfrmSecundario
     Height = 25
     Caption = 'Alterar'
     TabOrder = 0
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 251
@@ -50,6 +51,7 @@ object frmSecundario: TfrmSecundario
     Height = 25
     Caption = 'Excluir'
     TabOrder = 1
+    OnClick = Button2Click
   end
   object edtName: TEdit
     Left = 40
@@ -86,7 +88,7 @@ object frmSecundario: TfrmSecundario
     Top = 53
     Width = 75
     Height = 25
-    Caption = 'Adicionar'
+    Caption = 'Cadastrar'
     TabOrder = 6
     OnClick = Button4Click
   end

@@ -3,8 +3,8 @@ object frmPrincipal: TfrmPrincipal
   Top = 0
   BorderStyle = bsToolWindow
   Caption = 'Gerence CRUD'
-  ClientHeight = 197
-  ClientWidth = 321
+  ClientHeight = 185
+  ClientWidth = 313
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -25,9 +25,9 @@ object frmPrincipal: TfrmPrincipal
   object CRUD: TButton
     Left = 120
     Top = 8
-    Width = 75
+    Width = 73
     Height = 25
-    Caption = 'CRUD'
+    Caption = 'Fun'#231#245'es'
     TabOrder = 1
     OnClick = CRUDClick
   end

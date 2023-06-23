@@ -13,6 +13,7 @@ type
     procedure CRUDClick(Sender: TObject);
   private
     { Private declarations }
+    usuariosCadastrados: String;
   public
     { Public declarations }
   end;
@@ -31,6 +32,8 @@ begin
   frmSecundario:= TfrmSecundario.Create(nil);
   try
     frmSecundario.ShowModal;
+    usuariosCadastrados:= frmSecundario.Pessoa[0].nome;
+    Cadastrados.Lines.Add(frmSecundario.Pessoa[0].nome);
   finally
     frmSecundario.Free;
   end;
