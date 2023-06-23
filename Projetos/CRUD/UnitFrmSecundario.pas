@@ -196,8 +196,9 @@ begin
     // Colocamos o ID que estamos procurando em uma variável
     IDProcurado := StrToInt(edtID.Text);
 
-    // Procurar a linha com o ID no Memo
+    // Coloca -1 no Index para indicar erro
     Index := -1;
+    //
     for I := 0 to Cadastrados.Lines.Count - 1 do
     begin
       if Pos('Id: ' + IntToStr(IDProcurado), Cadastrados.Lines[I]) = 1 then
