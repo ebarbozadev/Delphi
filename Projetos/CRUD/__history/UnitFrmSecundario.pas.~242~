@@ -32,6 +32,7 @@ type
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -172,77 +173,120 @@ begin
   end;
 end;
 
-// Cadastrar
-procedure TfrmSecundario.Button4Click(Sender: TObject);
+// Alterar
+procedure TfrmSecundario.Button1Click(Sender: TObject);
 var
-  NovaPessoa: TPessoa;
+  Index: Integer;
+  PessoaAlterada: TPessoa;
+  IDProcurado: Integer;
   I: Integer;
-  X: Integer;
 begin
   try
     if (edtID.Text = '') then
     begin
       MessageDlg('Informe um ID', TMsgDlgType.mtError, [TMsgDlgBtn.mbOK], 0);
-      edtID.Text := '';
-    end
-    else if (StrToInt(edtID.Text) > 10) then
-    begin
-      MessageDlg('O ID tem que ser um número menor que onze (11)',
-        TMsgDlgType.mtError, [TMsgDlgBtn.mbOK], 0);
-      edtID.Text := '';
-    end
-    else if (edtName.Text = '') then
-    begin
-      MessageDlg('O nome não pode estar vazio', TMsgDlgType.mtError,
-        [TMsgDlgBtn.mbOK], 0);
-      edtName.Text := '';
-    end
-    else if (edtIdade.Text = '') then
-    begin
-      MessageDlg('A idade não pode estar vazia', TMsgDlgType.mtError,
-        [TMsgDlgBtn.mbOK], 0);
-      edtIdade.Text := '';
-    end
-    else if (StrToInt(edtIdade.Text)) = 0 then
-    begin
-      MessageDlg('A idade tem que ser maior que zero (0)', TMsgDlgType.mtError,
-        [TMsgDlgBtn.mbOK], 0);
-      edtIdade.Text := '';
-    end
-    else
-    begin
-      if (StrToInt(edtID.Text) = Pessoa[StrToInt(edtID.Text)].id) and
-        (Pessoa[StrToInt(edtID.Text)].nome <> '') then
-      begin
-        MessageDlg('O usuário já existe! Insira outro ID', TMsgDlgType.mtError,
-          [TMsgDlgBtn.mbOK], 0);
-        edtID.Text := '';
-      end
-      else
-      begin
-        NovaPessoa.id := StrToInt(edtID.Text);
-        NovaPessoa.nome := edtName.Text;
-        NovaPessoa.idade := StrToInt(edtIdade.Text);
-        Pessoa[StrToInt(edtID.Text)] := NovaPessoa;
-        Cadastrados.Lines.Add('Id: ' + IntToStr(Pessoa[StrToInt(edtID.Text)].id)
-          + ' Nome: ' + Pessoa[StrToInt(edtID.Text)].nome + ' Idade: ' +
-          IntToStr(Pessoa[StrToInt(edtID.Text)].idade));
-        edtName.Text := '';
-        edtIdade.Text := '';
-        edtID.Text := '';
+      Exit;
+    end;
 
-        MessageDlg('Cadastrado', TMsgDlgType.mtInformation,
-          [TMsgDlgBtn.mbOK], 0);
+    IDProcurado := StrToInt(edtID.Text);
+
+    // Procurar a linha com o ID no Memo
+    Index := -1;
+    for I := 0 to Cadastrados.Lines.Count - 1 do
+    begin
+      if Pos('Id: ' + IntToStr(IDProcurado), Cadastrados.Lines[I]) = 1 then
+      begin
+        // A linha com o ID procurado foi encontrada
+        // Armazena o índice encontrado (I) e interrompe o loop
+        Index := I;
+        Break;
       end;
     end;
 
-  except
+    if Index <> -1 then
     begin
-      MessageDlg('Erro inesperado, fale com o administrador',
-        TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
+      // Linha encontrada, faça as alterações desejadas
+      Cadastrados.Lines[Index] := 'Id: ' + IntToStr(IDProcurado) + ' Nome: ' +
+        edtName.Text + ' Idade: ' + edtIdade.Text;
+
+      MessageDlg('Registro alterado', TMsgDlgType.mtInformation,
+        [TMsgDlgBtn.mbOK], 0);
+
+      // Limpa os campos de entrada
+      edtName.Text := '';
+      edtIdade.Text := '';
+      edtID.Text := '';
+    end
+    else
+    begin
+      MessageDlg('ID não encontrado', TMsgDlgType.mtError,
+        [TMsgDlgBtn.mbOK], 0);
+    end;
+  except
+    on E: Exception do
+    begin
+      MessageDlg('Erro inesperado: ' + E.Message, TMsgDlgType.mtError,
+        [TMsgDlgBtn.mbOK], 0);
     end;
   end;
 end;
+
+
+
+// var
+// I: Integer;
+// begin
+// var
+// Nome: String;
+// for I := 0 to Cadastrados.Lines.Count - 1 do
+// begin
+// Nome:= edtName.Text;
+// if Cadastrados.Lines[I] =  then
+// begin
+// ShowMessage('Encontrado');
+// Break; // Para interromper o loop após encontrar a linha
+// end;
+// end;
+// end;
+
+// if Index <> -1 then
+// begin
+// Cadastrados.Lines.Delete(Index);
+// PessoaAlterada.id := StrToInt(edtID.Text);
+// PessoaAlterada.nome := edtName.Text;
+// PessoaAlterada.idade := StrToInt(edtIdade.Text);
+// Pessoa[StrToInt(edtID.Text)] := PessoaAlterada;
+// ShowMessage('Entrou')
+// end
+// else
+// begin
+// ShowMessage('Não entrou');
+// end;
+
+// NovaPessoa.id := StrToInt(edtID.Text);
+// NovaPessoa.nome := edtName.Text;
+// NovaPessoa.idade := StrToInt(edtIdade.Text);
+// Pessoa[StrToInt(edtID.Text)] := NovaPessoa;
+// Cadastrados.Lines.Add('Id: ' + IntToStr(Pessoa[StrToInt(edtID.Text)].id) + ' Nome: ' + Pessoa[StrToInt(edtID.Text)].nome + ' Idade: ' + IntToStr(Pessoa[StrToInt(edtID.Text)].idade));
+// edtName.Text := '';
+// edtIdade.Text := '';
+// edtID.Text := '';
+//
+// MessageDlg('Cadastrado', TMsgDlgType.mtInformation,
+// [TMsgDlgBtn.mbOK], 0);
+
+//edtName.Text := '';
+//edtIdade.Text := '';
+//edtID.Text := '';
+//MessageDlg('Alterado', TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
+//end;
+//except
+//  begin
+//    MessageDlg('Erro inesperado, fale com o administrador',
+//      TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
+//  end;
+//end;
+//end;
 
 // Excluir
 procedure TfrmSecundario.Button2Click(Sender: TObject);

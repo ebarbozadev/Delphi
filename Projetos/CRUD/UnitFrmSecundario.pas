@@ -176,18 +176,24 @@ end;
 // Alterar
 procedure TfrmSecundario.Button1Click(Sender: TObject);
 var
+  // Índice
   Index: Integer;
+  // Nova pessoa
   PessoaAlterada: TPessoa;
+  // ID que quero alterar
   IDProcurado: Integer;
+  // Para o laço
   I: Integer;
 begin
   try
+    // Se não informar um ID
     if (edtID.Text = '') then
     begin
       MessageDlg('Informe um ID', TMsgDlgType.mtError, [TMsgDlgBtn.mbOK], 0);
       Exit;
     end;
 
+    // Colocamos o ID que estamos procurando em uma variável
     IDProcurado := StrToInt(edtID.Text);
 
     // Procurar a linha com o ID no Memo
