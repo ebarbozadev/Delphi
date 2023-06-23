@@ -1,0 +1,53 @@
+unit UnitFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UnitFrmSecundario;
+
+type
+  TfrmPrincipal = class(TForm)
+    Cadastrados: TMemo;
+    CRUD: TButton;
+    procedure CRUDClick(Sender: TObject);
+  private
+    { Private declarations }
+    usuariosCadastrados: String;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.CRUDClick(Sender: TObject);
+var
+  frmSecundario: TfrmSecundario;
+  I: Integer;
+begin
+  frmSecundario:= TfrmSecundario.Create(nil);
+  try
+    frmSecundario.ShowModal;
+    for I := 0 to 10 do
+    begin
+      if frmSecundario.Pessoa[i].nome = '' then
+      begin
+        Exit;
+      end
+      else
+      begin
+        Cadastrados.Lines.Add('Id: ' + IntToStr(i) + #13 + 'Nome: ' + frmSecundario.Pessoa[i].nome + #13 + ' Idade: ' + IntToStr(frmSecundario.Pessoa[i].idade));
+      end;
+
+    end;
+  finally
+    frmSecundario.Free;
+  end;
+end;
+
+end.

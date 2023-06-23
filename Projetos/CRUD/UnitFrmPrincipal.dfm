@@ -3,7 +3,7 @@ object frmPrincipal: TfrmPrincipal
   Top = 0
   BorderStyle = bsToolWindow
   Caption = 'Gerence CRUD'
-  ClientHeight = 185
+  ClientHeight = 44
   ClientWidth = 313
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,22 +13,13 @@ object frmPrincipal: TfrmPrincipal
   Font.Style = []
   Position = poScreenCenter
   TextHeight = 15
-  object Cadastrados: TMemo
-    Left = 8
-    Top = 39
-    Width = 301
-    Height = 138
-    Lines.Strings = (
-      'Cadastrados')
-    TabOrder = 0
-  end
   object CRUD: TButton
     Left = 120
     Top = 8
     Width = 73
     Height = 25
     Caption = 'Fun'#231#245'es'
-    TabOrder = 1
+    TabOrder = 0
     OnClick = CRUDClick
   end
 end

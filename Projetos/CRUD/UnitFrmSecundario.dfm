@@ -4,8 +4,8 @@ object frmSecundario: TfrmSecundario
   BorderIcons = [biMinimize, biMaximize]
   BorderStyle = bsToolWindow
   Caption = 'CRUD'
-  ClientHeight = 93
-  ClientWidth = 434
+  ClientHeight = 325
+  ClientWidth = 416
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -53,52 +53,59 @@ object frmSecundario: TfrmSecundario
     TabOrder = 1
     OnClick = Button2Click
   end
-  object edtName: TEdit
-    Left = 40
-    Top = 24
-    Width = 332
-    Height = 23
-    TabOrder = 2
-  end
-  object edtIdade: TEdit
-    Left = 378
-    Top = 24
-    Width = 29
-    Height = 23
-    TabOrder = 3
-  end
-  object edtID: TEdit
-    Left = 8
-    Top = 24
-    Width = 29
-    Height = 23
-    TabOrder = 4
-  end
   object Button3: TButton
     Left = 332
     Top = 53
     Width = 75
     Height = 25
     Caption = 'Voltar'
-    TabOrder = 5
+    TabOrder = 2
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 89
+    Left = 9
     Top = 53
     Width = 75
     Height = 25
     Caption = 'Cadastrar'
-    TabOrder = 6
+    TabOrder = 3
     OnClick = Button4Click
   end
   object Button5: TButton
-    Left = 8
+    Left = 90
     Top = 53
     Width = 75
     Height = 25
     Caption = 'Consultar'
-    TabOrder = 7
+    TabOrder = 4
     OnClick = Button5Click
+  end
+  object Cadastrados: TMemo
+    Left = 8
+    Top = 84
+    Width = 399
+    Height = 236
+    TabOrder = 5
+  end
+  object edtID: TEdit
+    Left = 8
+    Top = 24
+    Width = 29
+    Height = 23
+    TabOrder = 6
+  end
+  object edtIdade: TEdit
+    Left = 378
+    Top = 24
+    Width = 29
+    Height = 23
+    TabOrder = 7
+  end
+  object edtName: TEdit
+    Left = 43
+    Top = 24
+    Width = 329
+    Height = 23
+    TabOrder = 8
   end
 end
