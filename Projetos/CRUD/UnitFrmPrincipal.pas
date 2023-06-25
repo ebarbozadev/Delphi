@@ -32,20 +32,8 @@ begin
   frmSecundario:= TfrmSecundario.Create(nil);
   try
     frmSecundario.ShowModal;
-//    for I := 0 to 10 do
-//    begin
-//      if frmSecundario.Pessoa[i].nome = '' then
-//      begin
-//        Exit;
-//      end
-//      else
-//      begin
-//        Cadastrados.Lines.Add('Id: ' + IntToStr(i) + #13 + 'Nome: ' + frmSecundario.Pessoa[i].nome + #13 + ' Idade: ' + IntToStr(frmSecundario.Pessoa[i].idade));
-//      end;
-//    end;
   finally
     frmSecundario.Free;
   end;
 end;
-
 end.

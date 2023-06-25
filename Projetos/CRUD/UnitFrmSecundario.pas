@@ -184,6 +184,7 @@ var
   IDProcurado: Integer;
   // Para o laço
   I: Integer;
+  NovaPessoa: TPessoa;
 begin
   try
     // Se não informar um ID
@@ -208,26 +209,51 @@ begin
         Index := I;
         Break;
       end;
+
     end;
 
     if Index <> -1 then
-    begin
-      // Linha encontrada, faça as alterações desejadas
-      Cadastrados.Lines[Index] := 'Id: ' + IntToStr(IDProcurado) + ' Nome: ' +
-        edtName.Text + ' Idade: ' + edtIdade.Text;
+      begin
+        // Linha encontrada, faça as alterações desejadas
+      if (edtName.Text = '') then
+      begin
+        MessageDlg('O nome não pode estar vazio', TMsgDlgType.mtError,
+          [TMsgDlgBtn.mbOK], 0);
+        edtName.Text := '';
+      end
+      else if (edtIdade.Text = '') then
+      begin
+        MessageDlg('A idade não pode estar vazia', TMsgDlgType.mtError,
+          [TMsgDlgBtn.mbOK], 0);
+        edtIdade.Text := '';
+      end
+      else if (StrToInt(edtIdade.Text)) = 0 then
+      begin
+        MessageDlg('A idade tem que ser maior que zero (0)',
+          TMsgDlgType.mtError, [TMsgDlgBtn.mbOK], 0);
+        edtIdade.Text := '';
+      end
+      else
+      begin
+        Cadastrados.Lines[Index] := 'Id: ' + IntToStr(IDProcurado) + ' Nome: ' +
+          edtName.Text + ' Idade: ' + edtIdade.Text;
+        NovaPessoa.nome := edtName.Text;
+        NovaPessoa.idade := StrToInt(edtIdade.Text);
+        Pessoa[StrToInt(edtID.Text)] := NovaPessoa;
 
-      MessageDlg('Registro alterado', TMsgDlgType.mtInformation,
-        [TMsgDlgBtn.mbOK], 0);
-
-      // Limpa os campos de entrada
-      edtName.Text := '';
-      edtIdade.Text := '';
-      edtID.Text := '';
+        MessageDlg('Registro alterado', TMsgDlgType.mtInformation,
+          [TMsgDlgBtn.mbOK], 0);
+        // Limpa os campos de entrada
+        edtName.Text := '';
+        edtIdade.Text := '';
+        edtID.Text := '';
+      end;
     end
     else
     begin
       MessageDlg('ID não encontrado', TMsgDlgType.mtError,
         [TMsgDlgBtn.mbOK], 0);
+      edtID.Text := '';
     end;
   except
     on E: Exception do
@@ -238,103 +264,67 @@ begin
   end;
 end;
 
-
-
-// var
-// I: Integer;
-// begin
-// var
-// Nome: String;
-// for I := 0 to Cadastrados.Lines.Count - 1 do
-// begin
-// Nome:= edtName.Text;
-// if Cadastrados.Lines[I] =  then
-// begin
-// ShowMessage('Encontrado');
-// Break; // Para interromper o loop após encontrar a linha
-// end;
-// end;
-// end;
-
-// if Index <> -1 then
-// begin
-// Cadastrados.Lines.Delete(Index);
-// PessoaAlterada.id := StrToInt(edtID.Text);
-// PessoaAlterada.nome := edtName.Text;
-// PessoaAlterada.idade := StrToInt(edtIdade.Text);
-// Pessoa[StrToInt(edtID.Text)] := PessoaAlterada;
-// ShowMessage('Entrou')
-// end
-// else
-// begin
-// ShowMessage('Não entrou');
-// end;
-
-// NovaPessoa.id := StrToInt(edtID.Text);
-// NovaPessoa.nome := edtName.Text;
-// NovaPessoa.idade := StrToInt(edtIdade.Text);
-// Pessoa[StrToInt(edtID.Text)] := NovaPessoa;
-// Cadastrados.Lines.Add('Id: ' + IntToStr(Pessoa[StrToInt(edtID.Text)].id) + ' Nome: ' + Pessoa[StrToInt(edtID.Text)].nome + ' Idade: ' + IntToStr(Pessoa[StrToInt(edtID.Text)].idade));
-// edtName.Text := '';
-// edtIdade.Text := '';
-// edtID.Text := '';
-//
-// MessageDlg('Cadastrado', TMsgDlgType.mtInformation,
-// [TMsgDlgBtn.mbOK], 0);
-
-//edtName.Text := '';
-//edtIdade.Text := '';
-//edtID.Text := '';
-//MessageDlg('Alterado', TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
-//end;
-//except
-//  begin
-//    MessageDlg('Erro inesperado, fale com o administrador',
-//      TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
-//  end;
-//end;
-//end;
-
 // Excluir
 procedure TfrmSecundario.Button2Click(Sender: TObject);
 var
-  PessoaExcluida: TPessoa;
+  // Índice
+  Index: Integer;
+  // Nova pessoa
+  PessoaAlterada: TPessoa;
+  // ID que quero alterar
+  IDProcurado: Integer;
+  // Para o laço
+  I: Integer;
 begin
   try
+    // Se não informar um ID
     if (edtID.Text = '') then
     begin
       MessageDlg('Informe um ID', TMsgDlgType.mtError, [TMsgDlgBtn.mbOK], 0);
-      edtID.Text := '';
-    end
-    else if (StrToInt(edtID.Text) > 10) then
+      Exit;
+    end;
+
+    // Colocamos o ID que estamos procurando em uma variável
+    IDProcurado := StrToInt(edtID.Text);
+
+    // Coloca -1 no Index para indicar erro
+    Index := -1;
+    //
+    for I := 0 to Cadastrados.Lines.Count - 1 do
     begin
-      MessageDlg('O ID tem que ser um número menor que onze (11)',
-        TMsgDlgType.mtError, [TMsgDlgBtn.mbOK], 0);
-      edtID.Text := '';
-    end
-    else if Pessoa[StrToInt(edtID.Text)].nome = '' then
+      if Pos('Id: ' + IntToStr(IDProcurado), Cadastrados.Lines[I]) = 1 then
+      begin
+        // A linha com o ID procurado foi encontrada
+        // Armazena o índice encontrado (I) e interrompe o loop
+        Index := I;
+        Break;
+      end;
+
+    end;
+
+    if Index <> -1 then
     begin
-      edtID.Text := '';
-      MessageDlg('Este usuário não está cadastrado', TMsgDlgType.mtError,
-        [TMsgDlgBtn.mbOK], 0);
-      edtID.Text := '';
-      edtIdade.Text := '';
+      Pessoa[IDProcurado].nome := '';
+      Pessoa[IDProcurado].idade := 0;
+      // Linha encontrada, faça as alterações desejadas
+      MessageDlg('Excluído', TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
+      // Limpa os campos de entrada
+      Cadastrados.Lines.Delete(Index);
       edtName.Text := '';
+      edtIdade.Text := '';
+      edtID.Text := '';
     end
     else
     begin
-      Pessoa[StrToInt(edtID.Text)].nome := '';
-      Pessoa[StrToInt(edtID.Text)].idade := 0;
-
-      edtName.Text := '';
-      edtIdade.Text := '';
+      MessageDlg('ID não encontrado', TMsgDlgType.mtError,
+        [TMsgDlgBtn.mbOK], 0);
       edtID.Text := '';
-      MessageDlg('Excluído', TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
     end;
   except
+    on E: Exception do
     begin
-      MessageDlg('Erro inesperado, fale com o administrador',
-        TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
+      MessageDlg('Erro inesperado: ' + E.Message, TMsgDlgType.mtError,
+        [TMsgDlgBtn.mbOK], 0);
     end;
   end;
 end;
