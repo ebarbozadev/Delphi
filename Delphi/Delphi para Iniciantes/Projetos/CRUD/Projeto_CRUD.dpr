@@ -1,0 +1,15 @@
+program Projeto_CRUD;
+
+uses
+  Vcl.Forms,
+  UnitFrmPrincipal in 'UnitFrmPrincipal.pas' {frmPrincipal},
+  UnitFrmSecundario in 'UnitFrmSecundario.pas' {frmSecundario};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.Run;
+end.

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/06/20 17:00:01.000.005,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/22 08:08:15.000.410,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/22 08:15:54.000.979,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Empresa\UnitFrmPrincipal.pas</Transaction>
+    <Transaction>2023/06/22 08:15:54.000.979,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Empresa\UnitFrmPrincipal.dfm</Transaction>
+    <Transaction>2023/06/22 08:16:03.000.108,=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/22 08:16:38.000.738,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Empresa\UnitFrmSecundario.pas</Transaction>
+    <Transaction>2023/06/22 08:16:38.000.738,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Empresa\UnitFrmSecundario.dfm</Transaction>
+    <Transaction>2023/06/22 08:20:51.000.863,C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\PC05\Documents\Embarcadero\Studio\Projects\Delphi Iniciante\Projetos\Cadastro de Empresa\Cadastrar_Empresa.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
